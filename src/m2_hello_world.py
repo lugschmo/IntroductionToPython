@@ -54,7 +54,7 @@ print('Hello, World')
 # DONE: 3.
 #   Add another   print   statement below.
 #   It should print any string that you want (but keep it G-rated!)
-#   Test your code by re-running this module using either the right click
+#   Test your code by re-runnig this module using either the right click
 #       method again or by using the play button in the upper right.
 #   Look at the Console to be sure that your string printed as expected.
 #
