@@ -2,15 +2,15 @@
 Your chance to explore Loops and Turtles!
 
 Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
+         their colleagues and Mitch Lugsch.
 """
 ########################################################################
-# TODO: 1.
+# DONE: 1.
 # On Line 5 above, replace  PUT_YOUR_NAME_HERE  with your own name.
 ########################################################################
 
 ########################################################################
-# TODO: 2.
+# DONE: 2.
 #
 #  You should have RUN the PREVIOUS module and READ its code.
 #  (Do so now if you have not already done so.)
@@ -28,3 +28,48 @@ Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
 #
 #  Don't forget to COMMIT your work by using  VCS ~ Commit and Push.
 ########################################################################
+
+import rosegraphics as rg
+
+window = rg.TurtleWindow()
+
+pink_turtle = rg.SimpleTurtle('turtle')
+pink_turtle.pen = rg.Pen('pink', 3)
+pink_turtle.speed = 16  # Fast
+
+length = 100
+
+for k in range(19):
+
+    # moving with the pen down
+    pink_turtle.forward(length)
+    pink_turtle.left(45)
+    pink_turtle.forward(length)
+    pink_turtle.left(45)
+    pink_turtle.forward(length)
+    pink_turtle.left(45)
+
+    length = length - 5
+
+orange_turtle = rg.SimpleTurtle('turtle')
+orange_turtle.pen = rg.Pen('orange', 5)
+orange_turtle.speed = 15  # Fast
+orange_turtle.pen_up()
+orange_turtle.backward(200)
+orange_turtle.left(90)
+
+distance = 235
+distance2 = 10
+
+for k in range(20):
+
+    orange_turtle.forward(distance)
+    orange_turtle.pen_up()
+    orange_turtle.left(90)
+    orange_turtle.forward(distance2)
+    orange_turtle.left(90)
+    orange_turtle.pen_down()
+
+    distance2 = distance2 + 10
+
+window.close_on_mouse_click()
